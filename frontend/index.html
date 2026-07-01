@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuTrust | Enterprise AI Document Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-file-shield"></i>
+            <span>DocuTrust</span>
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>Features</li>
+            <li>About</li>
+            <li><button class="nav-btn">Dashboard</button></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Enterprise AI <span>Document Assistant</span></h1>
+        <p>Upload PDFs • Ask Questions • Trust Every Answer</p>
+        <button class="primary-btn" id="heroUploadBtn"><i class="fa-solid fa-arrow-right"></i> Get Started</button>
+    </section>
+
+    <section class="upload-card">
+        <div class="upload-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h2>Upload your Document</h2>
+        <p>Drag & Drop your PDF or Click Below</p>
+        <input type="file" id="pdfFile" hidden accept="application/pdf">
+        <button id="uploadBtn">Choose PDF</button>
+    </section>
+
+    <section class="dashboard">
+        <aside>
+            <h3>Documents</h3>
+            <ul id="documentList">
+                <li class="empty-state">No documents uploaded yet.</li>
+            </ul>
+        </aside>
+
+        <main>
+            <div class="chat-header">
+                <h2>AI Assistant</h2>
+                <button id="clearChatBtn" class="secondary-btn">Clear</button>
+            </div>
+            <div class="chat-box" id="chatBox">
+                <div class="ai-message">
+                    Hello! Upload a PDF and I’ll help you ask questions about it.
+                </div>
+            </div>
+            <div class="chat-input">
+                <input id="chatInput" type="text" placeholder="Ask anything about your document...">
+                <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </main>
+    </section>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
